@@ -37,14 +37,17 @@
       </p>
       <h2>Explanation</h2>
       <p>
-        This is a very simple way of displaying a PDF in a webpage. The PDF can be viewed
-        inline, opened in a separate tab, or easily downloaded for future reference. In most
-        browsers, this behaves as expected. <em>In current versions of Firefox, it is
+        This covers the most common ways of displaying a PDF in a webpage. The PDF can be viewed
+        inline in two different ways, opened in a separate tab, or easily downloaded for future
+        reference. In most browsers, all four methods behave as expected. If we were to replace
+        the PDF with some other file that Firefox can display, like an MP4, all four methods would
+        behave as expected in Firefox<em>In current versions of Firefox, it is
         impossible to make this webpage fully functional.</em>
       </p>
       <p>
-        If PDF behavior is set to "Open in Firefox", the embed behaves correctly, but clicking
-        the download link will 
+        If PDF behavior is set to "Open in Firefox", the <code>embed</code>, <code>iframe</code>,
+        and direct link behave correctly, but clicking the download link will download the file
+        to the temp folder (without opening a download dialogue) <em>and</em> open it in a new tab.
       </p>
     </main>
   </body>
