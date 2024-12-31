@@ -91,10 +91,12 @@
         the <code>iframe</code> and direct link do not. As soon as the webpage loads, the <code>iframe</code>
         acts as if the user had attempted to download the PDF instead, opening a download dialogue or
         new software window while failing to display the PDF inline. The direct link opens a new tab which
-        immediately closes itself, and then does the same thing. In general, attempting to view a PDF
-        directly in Firefox under any setting other than "Open in Firefox" will be treated as trying to
-        download the file. <a href="png-counter-example.html">This does not match the behavior of other
-        file types, like PNGs.</a>
+        immediately closes itself, and then does the same thing.
+      </p>
+      <p>
+        In general, attempting to view a PDF directly in Firefox under any setting other than "Open in Firefox"
+        will be treated as if the user tried to download the file.
+        <a href="png-counter-example.html">This does not match the behavior of other file types, like PNGs.</a>
       </p>
     </main>
   </body>
