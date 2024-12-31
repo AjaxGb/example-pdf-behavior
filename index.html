@@ -15,7 +15,7 @@
         height: 50vh;
         border: 2px #EFEFEF inset;
       }
-      p, iframe, embed {
+      p, ul, iframe, embed {
         max-width: 800px;
       }
     </style>
@@ -51,21 +51,59 @@
           directory, or automatically opening the file in the user's software of choice.
         </li>
       </ul>
+      <p>
+        This is how every other browser behaves, <a href="png-counter-example.html">and how Firefox
+        behaves for every other displayable file type</a>.
+      </p>
       <h2>Actual Behavior</h2>
       <p>
-        In most browsers (Chrome, Edge, etc.), all four methods behave as expected.
-      </p>
-      <p>
-        If we were to replace the PDF with some other file that Firefox can display, like a PNG,
-        <a href="png-counter-example.html">all four methods would behave as expected even in Firefox.</a>
-      </p>
-      <p>
-        But exclusively for PDFs in current versions of Firefox, it is impossible to make this webpage
+        Exclusively for PDFs in current versions of Firefox, it is impossible to make this webpage
         behave as expected.
       </p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">PDF Download Setting</th>
+            <th scope="col"><code>embed</code></th>
+            <th scope="col"><code>iframe</code></th>
+            <th scope="col">Direct link</th>
+            <th scope="col">Download link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Open in Firefox</th>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <th scope="row">Open in other program</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Always ask</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Save File</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
       <p>
         If PDF behavior is set to "Open in Firefox", the <code>embed</code>, <code>iframe</code>,
-        and direct link behave correctly, but clicking the download link will download the file
+        and direct link behave as expected, but clicking the download link will download the file
         to the temp folder (without opening a download dialogue) <em>and</em> open it in a new tab.
         It is impossible for the webpage to open a download dialogue with this setting enabled.
       </p>
