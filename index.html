@@ -80,36 +80,45 @@
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
-            <td>❌</td>
+            <td>✔️</td>
           </tr>
           <tr>
             <th scope="row">Open in other program</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>✔️</td>
           </tr>
           <tr>
             <th scope="row">Always ask</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>✔️</td>
           </tr>
           <tr>
             <th scope="row">Save File</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>✔️</td>
           </tr>
         </tbody>
       </table>
       <p>
         If PDF behavior is set to "Open in Firefox", the <code>embed</code>, <code>iframe</code>,
-        and direct link behave as expected, but clicking the download link will download the file
-        to the temp folder (without opening a download dialogue) <em>and</em> open it in a new tab.
-        It is impossible for the webpage to open a download dialogue with this setting enabled.
+        direct link, and download link behave as expected. Clicking the download link will download
+        a temp file and then open it in a new tab. This matches our expected behavior.
+      </p>
+      <p>
+        Under all other settings, the <code>embed</code> and download link behave as expected but
+        the <code>iframe</code> and direct link do not. As soon as the webpage loads, the <code>iframe</code>
+        will be treated as if the user attempted to download the PDF, opening new software or download
+        dialogues, while failing to display the PDF inline. The direct link opens a new tab which
+        immediately closes itself, and then does the same thing. In general, attempting to view a PDF
+        directly in Firefox under any setting other than "Open in Firefox" will be treated as trying to
+        download the file. <a href="png-counter-example.html">This does not match the behavior of other
+        file types, like PNGs.</a>
       </p>
       <p></p>
     </main>
