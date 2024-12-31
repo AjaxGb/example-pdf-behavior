@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example PNG Behavior</title>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      iframe, embed {
+        width: 100%;
+        height: 50vh;
+        border: 2px #EFEFEF inset;
+      }
+      p, iframe, embed {
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Examples of Common PNG Behavior</h1>
+      <h2>Embedded with an <code>embed</code>:</h2>
+      <embed src="example.png" type="image/png" height="600"></embed>
+      <h2>Embedded with an <code>iframe</code>:</h2>
+      <iframe src="example.png" height="600"></iframe>
+      <h2>Direct link to the PNG:</h2>
+      <p>
+        <a href="example.png" target="_blank">Open the PNG in a New Tab</a>
+      </p>
+      <h2>Download link to the PNG:</h2>
+      <p>
+        <a href="example.png" download>Download the PNG</a>
+      </p>
+      <h2>Explanation</h2>
+      <p>
+        This covers the most same methods used for displaying PDFs on the <a href="../">main page</a>,
+        but with a PNG instead of a PDF. Note that even in Firefox everything behaves as expected. PDFs
+        are the only file type that misbehaves.
+      </p>
+    </main>
+  </body>
+</html>
