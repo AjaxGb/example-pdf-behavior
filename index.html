@@ -108,13 +108,13 @@
       <p>
         If PDF behavior is set to "Open in Firefox", the <code>embed</code>, <code>iframe</code>,
         direct link, and download link behave as expected. Clicking the download link will download
-        a temp file and then open it in a new tab. This matches our expected behavior.
+        a temp file and then open it in a new tab. This matches expected behavior.
       </p>
       <p>
-        Under all other settings, the <code>embed</code> and download link behave as expected but
+        Under any other setting, the <code>embed</code> and download link behave as expected, but
         the <code>iframe</code> and direct link do not. As soon as the webpage loads, the <code>iframe</code>
-        will be treated as if the user attempted to download the PDF, opening new software or download
-        dialogues, while failing to display the PDF inline. The direct link opens a new tab which
+        acts as if the user had attempted to download the PDF instead, opening a download dialogue or
+        new software window while failing to display the PDF inline. The direct link opens a new tab which
         immediately closes itself, and then does the same thing. In general, attempting to view a PDF
         directly in Firefox under any setting other than "Open in Firefox" will be treated as trying to
         download the file. <a href="png-counter-example.html">This does not match the behavior of other
