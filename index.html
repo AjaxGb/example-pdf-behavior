@@ -14,7 +14,7 @@
         height: 50vh;
         border: 2px #EFEFEF inset;
       }
-      p, ul, iframe, embed {
+      p, iframe, embed {
         width: 100%;
         max-width: 800px;
       }
@@ -45,21 +45,19 @@
         <a href="example.pdf" download rel="noopener noreferrer">Download the PDF</a>
       </p>
       <h2>Expected Behavior</h2>
-      <ul>
-        <li>
-          Both embed methods should display the PDF inline, without needing to open any new tabs
-          or adding an entry to the "Downloads" window.
-        </li>
-        <li>
-          The direct link should open the PDF in a new tab, without needing to add an entry to the
-          "Downloads" window.
-        </li>
-        <li>
-          The download link should enact the user's preferred download behavior for the PDF file
-          type. Either opening a download dialogue, automatically saving the file to the download
-          directory, or automatically opening the file in the user's software of choice.
-        </li>
-      </ul>
+      <p>
+        Both embed methods should display the PDF inline, without needing to open any new tabs
+        or adding an entry to the "Downloads" window.
+      </p>
+      <p>
+        The direct link should open the PDF in a new tab, without needing to add an entry to the
+        "Downloads" window.
+      </p>
+      <p>
+        The download link should enact the user's preferred download behavior for the PDF file
+        type. Either opening a download dialogue, automatically saving the file to the download
+        directory, or automatically opening the file in the user's software of choice.
+      </p>
       <p>
         This is how every other browser behaves, <a href="png-counter-example.html">and how Firefox
         behaves for every other displayable file type</a>.
