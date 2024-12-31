@@ -10,7 +10,7 @@
         flex-direction: column;
         align-items: center;
       }
-      embed {
+      iframe, embed {
         width: 100%;
         height: 50vh;
         border: 2px #EFEFEF inset;
@@ -19,12 +19,20 @@
   </head>
   <body>
     <main>
-      <h1>Example PDF Behavior</h1>
+      <h1>Examples of Common PDF Behavior</h1>
+      <h2>Embedded with an <code>embed</code>:</h2>
       <embed src="example.pdf" type="application/pdf" height="600"></embed>
+      <h2>Embedded with an <code>iframe</code>:</h2>
+      <iframe src="example.pdf" height="600"></iframe>
+      <h2>Direct link to the PDF:</h2>
       <p>
         <a href="example.pdf" target="_blank" rel="noopener noreferrer">Open the PDF in a New Tab</a>
+      </p>
+      <h2>Download link to the PDF:</h2>
+      <p>
         <a href="example.pdf" download rel="noopener noreferrer">Download the PDF</a>
       </p>
+      <h2>Explanation</h2>
       <p>
         This is a very simple way of displaying a PDF in a webpage. The PDF can be viewed
         inline, opened in a separate tab, or easily downloaded for future reference. In most
